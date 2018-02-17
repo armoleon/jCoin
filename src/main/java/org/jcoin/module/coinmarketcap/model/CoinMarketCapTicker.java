@@ -1,6 +1,8 @@
 package org.jcoin.module.coinmarketcap.model;
 
-public class CoinMarketCapTicker {
+import org.jcoin.module.base.model.BaseDto;
+
+public class CoinMarketCapTicker extends BaseDto {
 
     private String id;
     private String name;
