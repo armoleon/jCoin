@@ -10,7 +10,7 @@ public class CoinMarketCapTicker extends BaseDto {
     private String rank;
     private String priceInUSD;
     private String priceInBTC;
-    private String highestVolumeInUSD;
+    private String highestVolumeInUSDIn24Hour;
     private String marketCapInUSD;
     private String availableSupply;
     private String totalSupply;
@@ -68,12 +68,12 @@ public class CoinMarketCapTicker extends BaseDto {
         this.priceInBTC = priceInBTC;
     }
 
-    public String getHighestVolumeInUSD() {
-        return highestVolumeInUSD;
+    public String getHighestVolumeInUSDIn24Hour() {
+        return highestVolumeInUSDIn24Hour;
     }
 
-    public void setHighestVolumeInUSD(String highestVolumeInUSD) {
-        this.highestVolumeInUSD = highestVolumeInUSD;
+    public void setHighestVolumeInUSDIn24Hour(String highestVolumeInUSDIn24Hour) {
+        this.highestVolumeInUSDIn24Hour = highestVolumeInUSDIn24Hour;
     }
 
     public String getMarketCapInUSD() {
@@ -141,4 +141,24 @@ public class CoinMarketCapTicker extends BaseDto {
     }
 
 
+    @Override
+    public String toString() {
+        return "CoinMarketCapTicker{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", rank='" + rank + '\'' +
+                ", priceInUSD='" + priceInUSD + '\'' +
+                ", priceInBTC='" + priceInBTC + '\'' +
+                ", highestVolumeInUSDIn24Hour='" + highestVolumeInUSDIn24Hour + '\'' +
+                ", marketCapInUSD='" + marketCapInUSD + '\'' +
+                ", availableSupply='" + availableSupply + '\'' +
+                ", totalSupply='" + totalSupply + '\'' +
+                ", maxSupply='" + maxSupply + '\'' +
+                ", percentChangeIn1Hour='" + percentChangeIn1Hour + '\'' +
+                ", percentChangeIn24Hour='" + percentChangeIn24Hour + '\'' +
+                ", percentChangeIn7Days='" + percentChangeIn7Days + '\'' +
+                ", lastUpdated='" + lastUpdated + '\'' +
+                '}';
+    }
 }

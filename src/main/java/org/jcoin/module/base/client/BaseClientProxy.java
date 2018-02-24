@@ -15,10 +15,10 @@ public class BaseClientProxy<T extends BaseClient> {
     protected <B extends BaseConfig> T generateClient(Class<T> t, B config) {
         ResteasyWebTarget resteasyWebTarget = resteasyClient.target(UriBuilder.fromPath(config.getServiceUrl()));
 
-        if(config.getBaseRequestHeaderFilter()!=null){
+        if (config.getBaseRequestHeaderFilter() != null) {
             resteasyWebTarget.register(config.getBaseRequestHeaderFilter());
         }
-        if(config.getBaseResponseFilter()!=null){
+        if (config.getBaseResponseFilter() != null) {
             resteasyWebTarget.register(config.getBaseResponseFilter());
         }
         return resteasyWebTarget.proxy(t);

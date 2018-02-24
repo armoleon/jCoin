@@ -11,7 +11,7 @@ import org.jcoin.module.coinmarketcap.model.config.CoinMarketCapConfig;
 
 import java.util.List;
 
-public class CoinMarketCapService extends BaseService{
+public class CoinMarketCapService extends BaseService {
 
     private CoinMarketCapTickerClient coinMarketCapTickerClient;
     private CoinMarketCapGlobalClient coinMarketCapGlobalClient;
@@ -23,10 +23,9 @@ public class CoinMarketCapService extends BaseService{
     }
 
     public List<CoinMarketCapTicker> getTickers(Integer start, Integer limit) {
-        List<CoinMarketCapTickerEntity> tickerEntitites = coinMarketCapTickerClient.getTickers(start, limit, null);
-        return mapList(tickerEntitites, CoinMarketCapTicker.class);
+        List<CoinMarketCapTickerEntity> tickerEntities = coinMarketCapTickerClient.getTickers(start, limit, null);
+        return mapList(tickerEntities, CoinMarketCapTicker.class);
     }
-
 
 
 }

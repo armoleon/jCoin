@@ -1,6 +1,5 @@
 package org.jcoin;
 
-import org.jcoin.config.JCoinConfig;
 import org.jcoin.module.coinmarketcap.service.CoinMarketCapService;
 
 public class JCoin {
@@ -9,14 +8,18 @@ public class JCoin {
 
     private CoinMarketCapService coinMarketCapService;
 
-    private JCoin(JCoinConfig jCoinConfig) {
+    private JCoin() {
         this.coinMarketCapService = new CoinMarketCapService();
     }
 
-    public static synchronized JCoin getInstance(JCoinConfig jCoinConfig) {
+    public static synchronized JCoin getInstance() {
         if (instance == null) {
-            instance = new JCoin(jCoinConfig);
+            instance = new JCoin();
         }
         return instance;
+    }
+
+    public CoinMarketCapService getCoinMarketCapService() {
+        return coinMarketCapService;
     }
 }

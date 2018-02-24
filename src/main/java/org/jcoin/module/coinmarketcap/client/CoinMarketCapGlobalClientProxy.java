@@ -6,7 +6,7 @@ import org.jcoin.module.coinmarketcap.model.CoinMarketCapTickerEntity;
 
 import java.util.List;
 
-public class CoinMarketCapGlobalClientProxy extends BaseClientProxy<CoinMarketCapGlobalClient> implements CoinMarketCapGlobalClient{
+public class CoinMarketCapGlobalClientProxy extends BaseClientProxy<CoinMarketCapGlobalClient> implements CoinMarketCapGlobalClient {
 
     private CoinMarketCapGlobalClient coinMarketCapGlobalClient;
 

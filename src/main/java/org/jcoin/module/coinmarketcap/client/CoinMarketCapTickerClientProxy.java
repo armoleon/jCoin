@@ -6,7 +6,7 @@ import org.jcoin.module.coinmarketcap.model.CoinMarketCapTickerEntity;
 
 import java.util.List;
 
-public class CoinMarketCapTickerClientProxy extends BaseClientProxy<CoinMarketCapTickerClient> implements CoinMarketCapTickerClient{
+public class CoinMarketCapTickerClientProxy extends BaseClientProxy<CoinMarketCapTickerClient> implements CoinMarketCapTickerClient {
 
     private CoinMarketCapTickerClient coinMarketCapTickerClient;
 
@@ -16,6 +16,6 @@ public class CoinMarketCapTickerClientProxy extends BaseClientProxy<CoinMarketCa
 
     @Override
     public List<CoinMarketCapTickerEntity> getTickers(Integer start, Integer limit, String convert) {
-        return coinMarketCapTickerClient.getTickers(start,limit,convert);
+        return coinMarketCapTickerClient.getTickers(start, limit, convert);
     }
 }

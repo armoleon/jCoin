@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 @Path("/ticker/")
-public interface CoinMarketCapTickerClient extends BaseClient{
+public interface CoinMarketCapTickerClient extends BaseClient {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})

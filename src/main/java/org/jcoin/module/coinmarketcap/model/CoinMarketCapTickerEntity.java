@@ -1,9 +1,9 @@
 package org.jcoin.module.coinmarketcap.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import org.codehaus.jackson.annotate.JsonProperty;
 import org.jcoin.module.base.model.BaseEntity;
 
-public class CoinMarketCapTickerEntity extends BaseEntity{
+public class CoinMarketCapTickerEntity extends BaseEntity {
 
     @JsonProperty("id")
     private String id;
@@ -23,8 +23,8 @@ public class CoinMarketCapTickerEntity extends BaseEntity{
     @JsonProperty("price_btc")
     private String priceInBTC;
 
-    @JsonProperty("h_volume_usd")
-    private String highestVolumeInUSD;
+    @JsonProperty("24h_volume_usd")
+    private String highestVolumeInUSDIn24Hour;
 
     @JsonProperty("market_cap_usd")
     private String marketCapInUSD;
@@ -98,12 +98,12 @@ public class CoinMarketCapTickerEntity extends BaseEntity{
         this.priceInBTC = priceInBTC;
     }
 
-    public String getHighestVolumeInUSD() {
-        return highestVolumeInUSD;
+    public String getHighestVolumeInUSDIn24Hour() {
+        return highestVolumeInUSDIn24Hour;
     }
 
-    public void setHighestVolumeInUSD(String highestVolumeInUSD) {
-        this.highestVolumeInUSD = highestVolumeInUSD;
+    public void setHighestVolumeInUSDIn24Hour(String highestVolumeInUSDIn24Hour) {
+        this.highestVolumeInUSDIn24Hour = highestVolumeInUSDIn24Hour;
     }
 
     public String getMarketCapInUSD() {

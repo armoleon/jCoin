@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 @Path("/global/")
-public interface CoinMarketCapGlobalClient extends BaseClient{
+public interface CoinMarketCapGlobalClient extends BaseClient {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
